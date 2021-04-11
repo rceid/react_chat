@@ -1,0 +1,299 @@
+/* Main element formatting*/
+body {
+  background-color: rgb(92, 156, 92);
+  height: 100%;
+  margin: 0px;
+}
+
+header {
+  background-color: rgb(19, 85, 19);
+  padding: 2 10 2 10;
+  margin: 0, 0, 0,0 ;
+}
+footer {
+  background-color: rgb(92, 156, 92);
+  padding: 0 0 0 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 3px;
+}
+
+h1 {
+  text-align:center;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+/*Main app divs */
+
+.infoBar{
+  height: 30px;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.displayName {
+  font-size: 25px;
+}
+
+.postReply {
+  color:green;
+  font-weight:bold;
+  margin-top:0;
+  cursor: pointer;
+}
+
+.channels {
+  width: 20%;
+  background-color: rgb(19, 85, 19);
+}
+.comment_box {
+  position:fixed;
+  bottom:25;
+  left:300;
+  display:flex;
+}
+.words{
+  width:100%;
+}
+
+.channelChat {
+  width: 70%;
+  background-color: white;
+  border-style: ridge;
+  overflow-y: auto;
+  position: relative
+}
+
+.logOut {
+  cursor: pointer;
+  margin: 7px;
+  font-weight: bold;
+}
+
+.imgEmbed{
+  max-width: 150px;
+  height:auto;
+}
+.username{
+  margin:0;
+  font-weight: bold;
+}
+
+.replies{
+  width: 20%;
+  background-color: white;
+  overflow-y: auto;
+  position: relative;
+}
+
+.exitChat {
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  margin-bottom: 10%;
+}
+
+.exitReply {
+  font-weight: bold;
+  cursor: pointer;
+  float:right;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 600px; 
+}
+
+.chatInfoContainer{
+  width: 100%;
+  height: 85%;
+  display: table;
+}
+
+
+@media (max-width: 600px) {
+  .chatInfoContainer{
+    display: grid;
+    grid-template-columns: 100%;
+  } 
+  .channels {
+    width:100%;
+    z-index:1;
+    grid-column-start:1;
+    grid-row-start:2;
+  }
+  .channelChat{
+    width:100%;
+    z-index:2;
+    grid-column-start:1;
+    grid-row-start:2;
+  }
+  .replies{
+    z-index:2;
+    grid-column-start:1;
+    grid-row-start:2;
+    margin-left:50%;
+    width:50%;
+  }
+  .displayName{
+    font-size: x-small;
+  }
+  .channelLabel{
+    font-size: x-small;
+  }
+  .dropdown {
+    z-index:3;
+  }
+  #channel {
+    width:30%;
+  }
+
+}
+
+
+.chatSumm{
+  margin: 3% 0 0 0;
+  cursor: pointer;
+}
+
+.list{
+  padding: 0 0 0 .5%;
+  text-align:justify;
+  overflow-y: auto;
+}
+
+.delete {
+  float:right;
+  text-align:right;
+}
+
+.chanTitle{
+  margin: 0;
+  margin-bottom: 3%;
+}
+
+.reply {
+  margin-top: 0;
+  font-size:medium;
+}
+
+.post {
+  margin-top: 0;
+  font-size:large;
+  display:flex;
+  flex-direction: column;
+}
+.flex-down {
+  display:flex;
+  flex-direction: column;
+}
+
+.dropForm{
+  padding: 4px;
+  background-color: #3e8e41;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #1e5220;
+  color: white;
+  padding: 4px;
+  font-size: 16px;
+  border: solid;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border:outset;
+  border-color:white;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 6px 6px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/*Signup.login react forms */
+
+.signup {
+  width: 960px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.signup_form {
+  width: 400px;
+  border: 2px solid #AADDCC;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px 10px;
+  padding: 20px 40px 20px 40px;
+  box-sizing: unset;
+}
+
+.signup_form label {
+  grid-column: 1 / 2;
+  text-align: right;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.signup_form input {
+  grid-column: 2 / 4;
+  font-size: 24px;
+  border: 2px solid #AADDCC;
+  border-radius: 4px;
+}
+
+.signup_form button {
+  grid-column: 2;
+}
+
+button.form_button {
+  width: 100%;
+  font-size: 18px;
+  border: 2px solid #AADDCC;
+  border-radius: 4px;
+}
